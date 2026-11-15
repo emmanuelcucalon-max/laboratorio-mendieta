@@ -72,13 +72,18 @@
                   <stop offset="0" stop-color="#38c9d7"/>
                   <stop offset="1" stop-color="#10b981"/>
                 </linearGradient>
+                <clipPath id="flask-interior" clipPathUnits="userSpaceOnUse">
+                  <path d="M79 20h52v15h-9v53l48 81c13 22-3 49-28 49H69c-25 0-41-27-28-49l48-81V35h-10V20Z"/>
+                </clipPath>
               </defs>
               <path class="flask-glass" d="M79 20h52v15h-9v53l48 81c13 22-3 49-28 49H69c-25 0-41-27-28-49l48-81V35h-10V20Z"/>
-              <path class="flask-liquid" d="m75 139 30-10 34 8 21-7 24 40c7 12-2 28-17 28H69c-15 0-24-16-17-28l23-31Z"/>
+              <g clip-path="url(#flask-interior)">
+                <path class="flask-liquid" d="M25 145c22-9 49 8 77 0 27-8 49 7 83-3l15 26c8 14-2 30-18 30H36c-16 0-26-16-18-30l7-23Z"/>
+                <circle class="flask-bubble bubble-a" cx="105" cy="170" r="5"/>
+                <circle class="flask-bubble bubble-b" cx="133" cy="154" r="3"/>
+                <circle class="flask-bubble bubble-c" cx="145" cy="180" r="4"/>
+              </g>
               <path class="flask-highlight" d="M92 42v46l-17 29M111 23h18"/>
-              <circle class="flask-bubble bubble-a" cx="105" cy="170" r="5"/>
-              <circle class="flask-bubble bubble-b" cx="133" cy="154" r="3"/>
-              <circle class="flask-bubble bubble-c" cx="145" cy="180" r="4"/>
             </svg>
           </div>
           <div class="art-card card-safety">
