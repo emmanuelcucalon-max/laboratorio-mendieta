@@ -107,3 +107,82 @@ contactForm?.querySelectorAll("input, select, textarea").forEach((field) => {
 
 const currentYear = document.querySelector("#current-year");
 if (currentYear) currentYear.textContent = String(new Date().getFullYear());
+
+const catalogGrid = document.querySelector("#catalog-grid");
+const catalogSearch = document.querySelector("#catalog-search");
+const catalogCount = document.querySelector("#catalog-result-count");
+const catalogEmpty = document.querySelector("#catalog-empty");
+const filterButtons = document.querySelectorAll(".filter-button");
+
+if (catalogGrid && catalogSearch && catalogCount && catalogEmpty) {
+  const productCards = [...catalogGrid.querySelectorAll(".product-card")];
+
+  function normalizeSearch(value) {
+    return value.toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function updateCatalog() {
+    const activeFilter = document.querySelector(".filter-button.is-active")?.dataset.filter || "all";
+    const searchTerm = normalizeSearch(catalogSearch.value.trim());
+    let visibleCount = 0;
+
+    productCards.forEach((card) => {
+      const matchesCategory = activeFilter === "all" || card.dataset.category === activeFilter;
+      const matchesSearch = normalizeSearch(card.dataset.search + " " + card.dataset.productName).includes(searchTerm);
+      const isVisible = matchesCategory && matchesSearch;
+      card.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    catalogCount.textContent = `Mostrando ${visibleCount} ${visibleCount === 1 ? "producto" : "productos"}`;
+    catalogEmpty.hidden = visibleCount > 0;
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach((filterButton) => {
+        const isActive = filterButton === button;
+        filterButton.classList.toggle("is-active", isActive);
+        filterButton.setAttribute("aria-pressed", String(isActive));
+      });
+      updateCatalog();
+    });
+  });
+
+  catalogSearch.addEventListener("input", updateCatalog);
+}
+
+const imageLightbox = document.querySelector("#image-lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxCaption = document.querySelector("#lightbox-caption");
+
+document.querySelectorAll(".product-image-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const productImage = button.querySelector("img");
+    const productTitle = button.closest(".product-card")?.dataset.productName || productImage.alt;
+    if (!imageLightbox || !lightboxImage || !lightboxCaption) return;
+
+    lightboxImage.src = productImage.currentSrc || productImage.src;
+    lightboxImage.alt = productImage.alt;
+    lightboxCaption.textContent = productTitle;
+    imageLightbox.showModal();
+  });
+});
+
+document.querySelector(".lightbox-close")?.addEventListener("click", () => imageLightbox?.close());
+imageLightbox?.addEventListener("click", (event) => {
+  if (event.target === imageLightbox) imageLightbox.close();
+});
+
+document.querySelectorAll(".quote-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const productCard = button.closest(".product-card");
+    const presentation = productCard?.querySelector(".product-presentation");
+    if (!productCard || !presentation) return;
+
+    const selectedPresentation = presentation.selectedOptions[0].textContent.trim();
+    const message = `Hola Laboratorio Mendieta, deseo cotizar ${productCard.dataset.productName} en presentación de ${selectedPresentation}.`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  });
+});

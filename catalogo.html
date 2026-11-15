@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Conoce el catálogo oficial de productos químicos e higiénicos biodegradables de Laboratorio Mendieta.">
+  <title>Catálogo Oficial de Productos | Laboratorio Mendieta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#inicio" aria-label="Laboratorio Mendieta, página principal">
+        <img src="images/Logotipo.png" alt="Logotipo de Laboratorio Mendieta">
+        <span class="brand-text">Laboratorio <span class="brand-accent">Mendieta</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal">
+        <a class="nav-link" href="index.html#inicio">Inicio</a>
+        <a class="nav-link" href="index.html#servicios">Servicios</a>
+        <a class="nav-link" href="index.html#contacto">Contáctanos</a>
+        <a class="button button-primary nav-cta" href="index.html">← Volver a la Página Principal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="catalog-hero" aria-labelledby="catalog-title">
+      <div class="container">
+        <p class="eyebrow">Laboratorio Mendieta · Managua, Nicaragua</p>
+        <h1 id="catalog-title">Catálogo Oficial de Productos — Laboratorio Mendieta</h1>
+        <p class="catalog-subtitle">Fórmulas biodegradables de calidad industrial y doméstica | Licencia Sanitaria N.° 2057</p>
+        <a class="catalog-back-link" href="index.html"><span aria-hidden="true">←</span> Volver a la Página Principal (index.html)</a>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="productos" aria-label="Catálogo de productos">
+      <div class="container">
+        <div class="catalog-toolbar">
+          <div class="catalog-filters" role="group" aria-label="Filtrar por categoría">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter-button" type="button" data-filter="ambientadores" aria-pressed="false">Ambientadores</button>
+            <button class="filter-button" type="button" data-filter="cloro" aria-pressed="false">Cloro y Desinfección</button>
+            <button class="filter-button" type="button" data-filter="jabones" aria-pressed="false">Jabones y Textil</button>
+          </div>
+          <label class="catalog-search">
+            <span class="visually-hidden">Buscar por nombre o aroma</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+            <input id="catalog-search" type="search" placeholder="Buscar por nombre o aroma..." autocomplete="off">
+          </label>
+        </div>
+
+        <p class="catalog-result-count" id="catalog-result-count" role="status" aria-live="polite">Mostrando 11 productos</p>
+        <div class="catalog-grid" id="catalog-grid">
+          <article class="product-card" data-category="ambientadores" data-product-name="Línea General de Ambientadores" data-search="línea general ambientadores canela lavanda limón bebé fresa">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Línea General de Ambientadores">
+              <img src="images/Ambientadores.jpg" alt="Etiqueta de la línea general de ambientadores, con aromas disponibles" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Ambientadores</span>
+              <h2>Línea General de Ambientadores</h2>
+              <p>Aromatiza y refresca tus espacios con una fragancia duradera (Canela, Lavanda, Limón, Bebé, Fresa).</p>
+              <label for="presentation-ambientadores">Presentación</label>
+              <select id="presentation-ambientadores" class="product-presentation">
+                <option>3.78 L (Galón PET)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="ambientadores" data-product-name="Ambientador — Aroma Bebé" data-search="ambientador aroma bebé bebe">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Ambientador aroma Bebé">
+              <img src="images/Ambientador_aroma_a_bebe.jpg" alt="Etiqueta de ambientador con aroma a bebé" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Ambientadores</span>
+              <h2>Ambientador — Aroma Bebé</h2>
+              <p>Aromatiza tus espacios, fragancia duradera, elimina malos olores.</p>
+              <label for="presentation-bebe">Presentación</label>
+              <select id="presentation-bebe" class="product-presentation">
+                <option>3.78 L (Galón PET)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="ambientadores" data-product-name="Ambientador — Aroma Canela" data-search="ambientador aroma canela">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Ambientador aroma Canela">
+              <img src="images/Ambientador_aroma_a_canela.jpg" alt="Etiqueta de ambientador con aroma a canela" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Ambientadores</span>
+              <h2>Ambientador — Aroma Canela</h2>
+              <p>Aromatiza tus espacios, fragancia duradera, elimina malos olores.</p>
+              <label for="presentation-canela">Presentación</label>
+              <select id="presentation-canela" class="product-presentation">
+                <option>3.78 L (Galón PET)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="ambientadores" data-product-name="Ambientador — Aroma Fresa" data-search="ambientador aroma fresa">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Ambientador aroma Fresa">
+              <img src="images/Ambientador_aroma_a_fresa.jpg" alt="Etiqueta de ambientador con aroma a fresa" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Ambientadores</span>
+              <h2>Ambientador — Aroma Fresa</h2>
+              <p>Aromatiza tus espacios, fragancia duradera, elimina malos olores.</p>
+              <label for="presentation-fresa">Presentación</label>
+              <select id="presentation-fresa" class="product-presentation">
+                <option>3.78 L (Galón PET)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="ambientadores" data-product-name="Ambientador — Aroma Lavanda" data-search="ambientador aroma lavanda">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Ambientador aroma Lavanda">
+              <img src="images/Ambientador_aroma_a_lavanda.jpg" alt="Etiqueta de ambientador con aroma a lavanda" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Ambientadores</span>
+              <h2>Ambientador — Aroma Lavanda</h2>
+              <p>Aromatiza tus espacios, fragancia duradera, elimina malos olores.</p>
+              <label for="presentation-lavanda">Presentación</label>
+              <select id="presentation-lavanda" class="product-presentation">
+                <option>3.78 L (Galón PET)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="ambientadores" data-product-name="Ambientador — Aroma Limón" data-search="ambientador aroma limón limon">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Ambientador aroma Limón">
+              <img src="images/Ambientador_aroma_a_lim%C3%B3n.jpg" alt="Etiqueta de ambientador con aroma a limón" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Ambientadores</span>
+              <h2>Ambientador — Aroma Limón</h2>
+              <p>Aromatiza tus espacios, fragancia duradera, elimina malos olores.</p>
+              <label for="presentation-limon">Presentación</label>
+              <select id="presentation-limon" class="product-presentation">
+                <option>3.78 L (Galón PET)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="cloro" data-product-name="Cloro al 3%" data-search="cloro desinfección desinfecta blanquea bacterias">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Cloro al 3%">
+              <img src="images/Cloro_al_3%25.jpg" alt="Etiqueta de cloro al 3 por ciento" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Cloro y Desinfección</span>
+              <h2>Cloro al 3%</h2>
+              <p>Desinfecta, blanquea, elimina bacterias, limpieza profunda.</p>
+              <label for="presentation-cloro-3">Presentación</label>
+              <select id="presentation-cloro-3" class="product-presentation">
+                <option>3.78 L (Galón PET Cuadrado)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="cloro" data-product-name="Cloro al 6% — Uso Industrial" data-search="cloro 6% industrial desinfección desinfectante blanquea">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Cloro al 6%, uso industrial">
+              <img src="images/Cloro_al_6%25.jpg" alt="Etiqueta de cloro al 6 por ciento para uso industrial" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Cloro y Desinfección</span>
+              <h2>Cloro al 6% — Uso Industrial</h2>
+              <p>Mayor poder desinfectante, blanquea, elimina bacterias, limpieza profunda.</p>
+              <label for="presentation-cloro-6">Presentación</label>
+              <select id="presentation-cloro-6" class="product-presentation">
+                <option>3.78 L (Galón de Polietileno)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="jabones" data-product-name="Jabón de Mano — Color Morado" data-search="jabón jabón de mano morado manos higiene">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Jabón de Mano color morado">
+              <img src="images/Jabon_de_mano.jpg" alt="Etiqueta de jabón de manos color morado" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Jabones y Textil</span>
+              <h2>Jabón de Mano — Color Morado</h2>
+              <p>Higiene y protección para tus manos. Limpia, higieniza, agradable fragancia.</p>
+              <label for="presentation-jabon-mano">Presentación</label>
+              <select id="presentation-jabon-mano" class="product-presentation">
+                <option>3.78 L (Galón PET)</option>
+                <option>1,000 ml (Litro)</option>
+                <option>500 ml (Medio Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="jabones" data-product-name="Jabón Industrial — Sin Aroma" data-search="jabón jabón industrial sin aroma desengrasante">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Jabón Industrial sin aroma">
+              <img src="images/Jabon_Industrial.jpg" alt="Etiqueta de jabón industrial sin aroma" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Jabones y Textil</span>
+              <h2>Jabón Industrial — Sin Aroma</h2>
+              <p>Alto poder desengrasante, limpieza profunda, uso general e industrial.</p>
+              <label for="presentation-jabon-industrial">Presentación</label>
+              <select id="presentation-jabon-industrial" class="product-presentation">
+                <option>3.78 L (Galón)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="jabones" data-product-name="Suavizante de Telas" data-search="suavizante telas ropa blanco celeste frescura">
+            <button class="product-image-button" type="button" aria-label="Ampliar etiqueta: Suavizante de Telas">
+              <img src="images/Suavizante.jpg" alt="Etiqueta de suavizante de telas, colores blanco y celeste" loading="lazy">
+              <span class="image-zoom-hint">Ver etiqueta ampliada <span aria-hidden="true">↗</span></span>
+            </button>
+            <div class="product-content">
+              <span class="product-category">Jabones y Textil</span>
+              <h2>Suavizante de Telas</h2>
+              <p>Suavidad, frescura y cuidado para tu ropa (Blanco y Celeste).</p>
+              <label for="presentation-suavizante">Presentación</label>
+              <select id="presentation-suavizante" class="product-presentation">
+                <option>3.78 L (Galón)</option>
+                <option>1,000 ml (Litro)</option>
+              </select>
+              <button class="button button-primary quote-button" type="button">Cotizar por WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+        </div>
+        <p class="catalog-empty" id="catalog-empty" hidden>No encontramos productos con ese nombre o aroma. Prueba otra búsqueda o categoría.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer catalog-footer">
+    <div class="container catalog-footer-main">
+      <a class="brand footer-brand" href="index.html#inicio" aria-label="Laboratorio Mendieta, página principal">
+        <img src="images/Logotipo.png" alt="Laboratorio Mendieta">
+      </a>
+      <p class="catalog-footer-tagline">Laboratorio Mendieta<br><span>Innovando en Química desde 2024</span></p>
+      <div class="catalog-footer-contact">
+        <address>Semáforos Linda Vista 3 Oeste 125 vrs Norte, Managua</address>
+        <p><a href="tel:+50582228669">8222-8669</a> / <a href="tel:+50577319685">7731-9685</a></p>
+        <a href="mailto:gerencia@laboratoriomendieta.com">gerencia@laboratoriomendieta.com</a>
+      </div>
+      <a class="catalog-footer-back" href="index.html">Volver a la página principal <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="current-year">2026</span> Laboratorio Mendieta. Todos los derechos reservados.</span>
+      <a href="index.html">Página principal</a>
+    </div>
+  </footer>
+
+  <dialog class="image-lightbox" id="image-lightbox" aria-label="Etiqueta del producto ampliada">
+    <div class="lightbox-panel">
+      <button class="lightbox-close" type="button" aria-label="Cerrar etiqueta ampliada">×</button>
+      <img id="lightbox-image" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+  </dialog>
+</body>
+</html>
