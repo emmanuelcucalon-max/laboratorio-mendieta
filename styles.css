@@ -31,6 +31,10 @@ button { cursor: pointer; }
 .header-inner { display: flex; height: 100%; align-items: center; justify-content: space-between; gap: 30px; }
 .brand { display: inline-flex; flex: 0 0 auto; align-items: center; }
 .brand img { display: block; width: auto; max-width: 230px; max-height: 50px; object-fit: contain; }
+.header-inner .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; }
+.header-inner .brand img { height: 44px; width: auto; object-fit: contain; }
+.brand-text { color: #0F172A; font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.25rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; white-space: nowrap; }
+.brand-accent { color: #0891B2; }
 .primary-navigation { display: flex; height: 100%; align-items: center; gap: clamp(16px, 2.2vw, 30px); }
 .nav-link { color: var(--text); font-size: 13px; font-weight: 500; transition: color .18s ease; }
 .nav-link:hover, .nav-link:focus-visible { color: var(--cyan); }
@@ -183,6 +187,11 @@ h1, h2, h3 { color: var(--slate); font-family: var(--font-heading); }
 .whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(15,23,42,.25); }
 .whatsapp-float svg { width: 29px; height: 29px; fill: currentColor; }
 :focus-visible { outline: 3px solid rgba(8,145,178,.45); outline-offset: 3px; }
+
+@media (max-width: 768px) {
+  .header-inner .brand img { height: 36px; }
+  .brand-text { font-size: 1.05rem; }
+}
 
 @media (max-width: 930px) {
   .container { width: min(var(--container), calc(100% - 40px)); }
